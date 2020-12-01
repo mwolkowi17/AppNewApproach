@@ -1,0 +1,118 @@
+﻿<Page x:Class="AppEduNewApproach.MainMenu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AppEduNewApproach"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="MainMenu">
+    <Page.Resources>
+        <ImageBrush x:Key="ButtonAImage" ImageSource="Images/D1_ikona1_wersja2.png"></ImageBrush>
+        <ImageBrush x:Key="ButtonAImageOver" ImageSource="Images/D1_ikona1_wersja2b.png"></ImageBrush>
+        <ImageBrush x:Key="ButtonBImage" ImageSource="Images/D1_ikona2.png"></ImageBrush>
+        <ImageBrush x:Key="ButtonBImageOver" ImageSource="Images/D1_ikona2b.png"></ImageBrush>
+        <ImageBrush x:Key="ButtonCImage" ImageSource="Images/D1_ikona3.png"></ImageBrush>
+        <ImageBrush x:Key="ButtonCImageOver" ImageSource="Images/D1_ikona3b.png"></ImageBrush>
+        
+        <Style x:Key="ButtonA" TargetType="Button" >
+            <Setter Property="Background" Value="{StaticResource ButtonAImage}"></Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                    Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" 
+                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" RecognizesAccessKey="True"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                
+                                <Setter Property="Background" Value="{StaticResource ButtonAImageOver}"></Setter>
+                                <Setter Property="Cursor" Value="Hand" />
+                                <!-- If we don't tell the background to change on hover, it will remain the same -->
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="ButtonB" TargetType="Button" >
+            <Setter Property="Background" Value="{StaticResource ButtonBImage}"></Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                    Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" 
+                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" RecognizesAccessKey="True"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                
+                                <Setter Property="Background" Value="{StaticResource ButtonBImageOver}"></Setter>
+                                <Setter Property="Cursor" Value="Hand" />
+                                <!-- If we don't tell the background to change on hover, it will remain the same -->
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="ButtonC" TargetType="Button" >
+            <Setter Property="Background" Value="{StaticResource ButtonCImage}"></Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                    Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" 
+                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" RecognizesAccessKey="True"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                
+                                <Setter Property="Background" Value="{StaticResource ButtonCImageOver}"></Setter>
+                                <Setter Property="Cursor" Value="Hand" />
+                                <!-- If we don't tell the background to change on hover, it will remain the same -->
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+    <Grid>
+
+        <Grid.Background>
+            <ImageBrush ImageSource="Images/glowna_Dopalacze1_2x.jpg"/>
+        </Grid.Background>
+        
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="33*"/>
+            <ColumnDefinition Width="33*"/>
+            <ColumnDefinition Width="33*"/>
+
+        </Grid.ColumnDefinitions>
+
+        <Button Style="{StaticResource ButtonA}" Content="Button" x:Name="buttonA" Grid.Column="0" Width="419" Height="371" BorderBrush="#00707070" Click="ButtonAClick"  >
+        
+        </Button>
+
+        <Button Style="{StaticResource ButtonB}"  Content="Button" x:Name="buttonB" Grid.Column="1" Width="419" Height="371" BorderBrush="#00707070"  >
+            
+
+        </Button>
+
+        <Button Style="{StaticResource ButtonC}"  Content="Button" x:Name="buttonC" Grid.Column="2" Width="419" Height="371" BorderBrush="#00707070" >
+            
+        </Button>
+        <!--<StackPanel x:Name="Dane" DataContext="{Binding Source={StaticResource PlanszeSource}, XPath=Adress[1]}" >-->
+        <StackPanel x:Name="Dane" DataContext="{Binding Source={StaticResource PlanszeSource}}" >
+        </StackPanel>
+
+    </Grid>
+</Page>
