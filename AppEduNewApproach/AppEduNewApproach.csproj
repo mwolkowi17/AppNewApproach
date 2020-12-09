@@ -87,6 +87,7 @@
     <Compile Include="Models\PlanszaTypA.cs" />
     <Compile Include="Models\PlanszaTypB.cs" />
     <Compile Include="Models\PlanszaTypC.cs" />
+    <Compile Include="Models\QuizA.cs" />
     <Compile Include="PlanszeA.xaml.cs">
       <DependentUpon>PlanszeA.xaml</DependentUpon>
     </Compile>
