@@ -67,6 +67,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Data\MetodyPomocnicze.cs" />
+    <Compile Include="Data\ZbiorDanych.cs" />
     <Compile Include="MainMenu.xaml.cs">
       <DependentUpon>MainMenu.xaml</DependentUpon>
     </Compile>
@@ -80,6 +82,11 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Film.cs" />
+    <Compile Include="Models\IkonaApp.cs" />
+    <Compile Include="Models\PlanszaTypA.cs" />
+    <Compile Include="Models\PlanszaTypB.cs" />
+    <Compile Include="Models\PlanszaTypC.cs" />
     <Compile Include="PlanszeA.xaml.cs">
       <DependentUpon>PlanszeA.xaml</DependentUpon>
     </Compile>
