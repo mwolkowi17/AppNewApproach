@@ -24,7 +24,7 @@ namespace AppEduNewApproach
         public PlanszeA()
         {
             InitializeComponent();
-            n = 2;
+            n = 1;
         }
 
         public PlanszeA(object data) :this()
@@ -34,16 +34,17 @@ namespace AppEduNewApproach
 
         private void ButtonForward(object sender, RoutedEventArgs e)
         {
-
-            obrazekTypA.Source = new ImageSourceConverter().ConvertFromString($"Images/grzyby_app{n}.jpg") as ImageSource;
+            MetodyPomocnicze nowa = new MetodyPomocnicze();
+            obrazekTypA.Source = new ImageSourceConverter().ConvertFromString(nowa.PlanszaDalejA(n, ZbiorDanych.PlanszePoczatkowe).PlanszaTypAAdress) as ImageSource;
             n++;
-            if (n > 6)
+            if (n > 5)
             {
                 MainMenu mainMenu = new MainMenu();
                 this.NavigationService.Navigate(mainMenu);
             }
-            //PlanszeA1 planszeA1 = new PlanszeA1();
-            //this.NavigationService.Navigate(planszeA1);
+
+
+           
         }
     }
 }
