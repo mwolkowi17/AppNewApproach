@@ -1,0 +1,83 @@
+﻿<Page x:Class="AppEduNewApproach.QuizzesA"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AppEduNewApproach"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="QuizzesA">
+    
+    <Page.Resources>
+        <ImageBrush x:Key="ButtonDalej" ImageSource="Images/trojkat_dalej.png"></ImageBrush>
+        <ImageBrush x:Key="ButtonDalejOver" ImageSource="Images/trojkat_dalej2.png"></ImageBrush>
+
+        <Style x:Key="buttonFilm" TargetType="Button" >
+            <Setter Property="Background" Value="{StaticResource ButtonDalej}"></Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                    Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" 
+                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" RecognizesAccessKey="True"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+
+                                <Setter Property="Background" Value="{StaticResource ButtonDalejOver}"></Setter>
+                                <Setter Property="Cursor" Value="Hand" />
+                                <!-- If we don't tell the background to change on hover, it will remain the same -->
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+    
+    <Grid>
+        <Grid>
+            <Grid.Background>
+                <ImageBrush ImageSource="Images/grzyby1_tlo2.png"/>
+            </Grid.Background>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="70*"/>
+                <ColumnDefinition Width="10*"/>
+
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="60*"/>
+                <RowDefinition Height="20*"/>
+            </Grid.RowDefinitions>
+
+
+
+            <!--   <Image Grid.Column="1" Grid.Row="1" x:Name="obrazekTypA" Source="{Binding XPath=@link}"/>-->
+            <!--<Image Grid.Column="1" Grid.Row="1" x:Name="obrazekTypA" Source="{Binding XPath=Adress[1]}"/>-->
+            <Image Grid.Column="1" Grid.Row="1" x:Name="quizzysTypA" />
+            <Button Style="{StaticResource buttonFilm}" x:Name="buttonFilm"  Grid.Column="3" Grid.Row="2" Width="30" Height="22" BorderBrush="#00707070" Click="Button_Forward"/>
+            <Grid Grid.Row="1" Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10*"/>
+                    <ColumnDefinition Width="70*"/>
+                    <ColumnDefinition Width="10*"/>
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20*"/>
+                    <RowDefinition Height="20*"/>
+                    <RowDefinition Height="20*"/>
+                    <RowDefinition Height="20*"/>
+                </Grid.RowDefinitions>
+                <Button x:Name="Button1"   Grid.Column="0" Grid.Row="0" Click="Button_Click1">odp1</Button>
+                <Button x:Name="Button2" Grid.Column="0" Grid.Row="1">odp2</Button>
+                <Button x:Name="Button3" Grid.Column="0" Grid.Row="2">odp3</Button>
+                <Button x:Name="Button4" Grid.Column="0" Grid.Row="3">odp4</Button>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

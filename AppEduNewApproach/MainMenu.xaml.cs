@@ -35,5 +35,11 @@ namespace AppEduNewApproach
             
             this.NavigationService.Navigate(planszaA);
         }
+
+        private void ButtonCClick(object sender, RoutedEventArgs e)
+        {
+            QuizzesA quizzesA = new QuizzesA();
+            this.NavigationService.Navigate(quizzesA);
+        }
     }
 }

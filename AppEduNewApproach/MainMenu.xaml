@@ -107,7 +107,7 @@
 
         </Button>
 
-        <Button Style="{StaticResource ButtonC}"  Content="Button" x:Name="buttonC" Grid.Column="2" Width="419" Height="371" BorderBrush="#00707070" >
+        <Button Style="{StaticResource ButtonC}"  Content="Button" x:Name="buttonC" Grid.Column="2" Width="419" Height="371" BorderBrush="#00707070" Click="ButtonCClick" >
             
         </Button>
         <!--<StackPanel x:Name="Dane" DataContext="{Binding Source={StaticResource PlanszeSource}, XPath=Adress[1]}" >-->

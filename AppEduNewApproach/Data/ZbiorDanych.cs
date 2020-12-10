@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AAppEduNewApproach;
-
+using AppEduNewApproach.Models;
 
 namespace AppEduNewApproach
 {
@@ -16,6 +16,7 @@ namespace AppEduNewApproach
         public static List<IkonaApp> IkonyProgramu { get; set; }
         public static List<PlanszaTypA>PlanszePoczatkowe { get; set; }
         public static List<PlanszaTypC>PlanszePomoc { get; set; }
+        public static List<QuizA>QuizzyPlanszeA { get; set; }
 
         static ZbiorDanych()
         {
@@ -66,6 +67,11 @@ namespace AppEduNewApproach
             PlanszePomoc.Add(new PlanszaTypC(10, @"Images/pierwsza_pomoc6C_2x.jpg", "nowe10"));
             PlanszePomoc.Add(new PlanszaTypC(11, @"Images/pierwsza_pomoc7_2x.jpg", "nowe11"));
             PlanszePomoc.Add(new PlanszaTypC(12, @"Images/pierwsza_pomoc8_2x.jpg", "nowe12"));
+
+            QuizzyPlanszeA = new List<QuizA>();
+
+            QuizzyPlanszeA.Add(new QuizA(1, @"Images/grzyby_app_quizz1.jpg", "nowy1", 2));
+            QuizzyPlanszeA.Add(new QuizA(2, @"Images/grzyby_app_quizz2.jpg", "nowy2", 2));
         }
     }
 }

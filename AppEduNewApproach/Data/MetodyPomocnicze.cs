@@ -1,4 +1,5 @@
 ﻿using AAppEduNewApproach;
+using AppEduNewApproach.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -76,6 +77,15 @@ namespace AppEduNewApproach
             {
                 wynik = kolekcja[kolekcja.Count - 1];
             }
+            return wynik;
+        }
+
+        public QuizA nowyQuizPlansza (int x, List<QuizA> kolekcja)
+        {
+            QuizA wynik;
+
+            wynik = kolekcja[x];
+
             return wynik;
         }
     }
