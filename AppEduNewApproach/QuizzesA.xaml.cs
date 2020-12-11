@@ -31,6 +31,8 @@ namespace AppEduNewApproach
             planszatestowa = nowa.nowyQuizPlansza(n, ZbiorDanych.QuizzyPlanszeA);
             quizzysTypA.Source= new ImageSourceConverter().ConvertFromString(planszatestowa.QuizAAdress) as ImageSource;
             buttonFilm.Visibility = Visibility.Hidden;
+            quizzanswer.Content = planszatestowa.QuizzAnswer;
+            quizzanswer.Visibility = Visibility.Hidden;
         }
 
         private void Button_Forward(object sender, RoutedEventArgs e)
@@ -39,11 +41,13 @@ namespace AppEduNewApproach
             MetodyPomocnicze nowa = new MetodyPomocnicze();
             planszatestowa = nowa.nowyQuizPlansza(n, ZbiorDanych.QuizzyPlanszeA);
             quizzysTypA.Source = new ImageSourceConverter().ConvertFromString(planszatestowa.QuizAAdress) as ImageSource;
+            quizzanswer.Content = planszatestowa.QuizzAnswer;
             buttonFilm.Visibility = Visibility.Hidden;
             Button1.Visibility = Visibility.Visible;
             Button2.Visibility = Visibility.Visible;
             Button3.Visibility = Visibility.Visible;
             Button4.Visibility = Visibility.Visible;
+            quizzanswer.Visibility = Visibility.Hidden;
         }
 
         private void Button_Click1(object sender, RoutedEventArgs e)
@@ -56,6 +60,7 @@ namespace AppEduNewApproach
                 Button3.Visibility = Visibility.Hidden;
                 Button4.Visibility = Visibility.Hidden;
                 buttonFilm.Visibility = Visibility.Visible;
+                quizzanswer.Visibility = Visibility.Visible;
             }
             else
             {
@@ -65,6 +70,7 @@ namespace AppEduNewApproach
                 Button3.Visibility = Visibility.Hidden;
                 Button4.Visibility = Visibility.Hidden;
                 buttonFilm.Visibility = Visibility.Visible;
+                quizzanswer.Visibility = Visibility.Visible;
             }
            
         }

@@ -12,6 +12,7 @@ namespace AppEduNewApproach.Models
         public string QuizAAdress { get; set; }
         public string QuizzAName { get; set; }
         public int QuizzAButton { get; set; }
+        public string QuizzAnswer { get; set; }
         // mechanim sprawdzania jeśli button się zgadza wyświetla planszę wynik i dodaje punkty
 
         public QuizA(int id, string adress, string name, int button)
@@ -21,6 +22,16 @@ namespace AppEduNewApproach.Models
             QuizzAName = name;
             QuizzAButton = button;
           
+        }
+
+        public QuizA(int id, string adress, string name, int button, string answer)
+        {
+            QuizAId = id;
+            QuizAAdress = adress;
+            QuizzAName = name;
+            QuizzAButton = button;
+            QuizzAnswer = answer;
+
         }
     }
 }

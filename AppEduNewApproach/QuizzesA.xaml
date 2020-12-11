@@ -77,6 +77,7 @@
                 <Button x:Name="Button2" Grid.Column="0" Grid.Row="1">odp2</Button>
                 <Button x:Name="Button3" Grid.Column="0" Grid.Row="2">odp3</Button>
                 <Button x:Name="Button4" Grid.Column="0" Grid.Row="3">odp4</Button>
+                <Label x:Name="quizzanswer" Grid.Column="1" Grid.Row="3"/>
             </Grid>
         </Grid>
     </Grid>

@@ -70,8 +70,8 @@ namespace AppEduNewApproach
 
             QuizzyPlanszeA = new List<QuizA>();
 
-            QuizzyPlanszeA.Add(new QuizA(1, @"Images/grzyby_app_quizz1.jpg", "nowy1", 2));
-            QuizzyPlanszeA.Add(new QuizA(2, @"Images/grzyby_app_quizz2.jpg", "nowy2", 2));
+            QuizzyPlanszeA.Add(new QuizA(1, @"Images/grzyby_app_quizz1.jpg", "nowy1", 2,"Odpowiedź1"));
+            QuizzyPlanszeA.Add(new QuizA(2, @"Images/grzyby_app_quizz2.jpg", "nowy2", 1, "Odpowiedź2"));
         }
     }
 }
