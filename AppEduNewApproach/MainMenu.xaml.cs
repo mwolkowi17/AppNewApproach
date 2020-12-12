@@ -41,5 +41,11 @@ namespace AppEduNewApproach
             QuizzesA quizzesA = new QuizzesA();
             this.NavigationService.Navigate(quizzesA);
         }
+
+        private void ButtonBClick(object sender, RoutedEventArgs e)
+        {
+            FilmA filmA = new FilmA();
+            this.NavigationService.Navigate(filmA);
+        }
     }
 }

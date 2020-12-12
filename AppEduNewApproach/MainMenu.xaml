@@ -102,7 +102,7 @@
         
         </Button>
 
-        <Button Style="{StaticResource ButtonB}"  Content="Button" x:Name="buttonB" Grid.Column="1" Width="419" Height="371" BorderBrush="#00707070"  >
+        <Button Style="{StaticResource ButtonB}"  Content="Button" x:Name="buttonB" Grid.Column="1" Width="419" Height="371" BorderBrush="#00707070" Click="ButtonBClick"  >
             
 
         </Button>
