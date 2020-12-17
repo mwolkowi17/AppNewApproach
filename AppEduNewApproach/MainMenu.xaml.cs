@@ -47,5 +47,10 @@ namespace AppEduNewApproach
             FilmA filmA = new FilmA();
             this.NavigationService.Navigate(filmA);
         }
+
+        private void ExitApp(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Application.Current.Shutdown();
+        }
     }
 }

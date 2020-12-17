@@ -182,5 +182,9 @@
   <ItemGroup>
     <Resource Include="Images\film.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\exit_text2.png" />
+    <Resource Include="Images\exit_text2_mouse.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
